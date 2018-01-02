@@ -1,0 +1,1342 @@
+/*
+Theme Name: CTP Bridal
+Theme URI: http://chungthanhphong.com/rin
+Author: PPO VIET NAM
+Author URI: http://ppo.vn/
+Description: In 2015, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: rin
+Email: info@ppo.vn
+Phone: 046 2929 445
+Mobile: 096 4747 046
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@font-face {
+    font-family: 'Franklin Gothic Book Italic';
+    src: url('fonts/Franklin-Gothic-Book-Italic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Franklin Gothic Book';
+    src: url('fonts/Franklin-Gothic-Book.ttf');
+}
+@font-face {
+    font-family: 'Franklin Gothic Medium Italic';
+    src: url('fonts/Franklin-Gothic-Medium-Italic.ttf');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Franklin Gothic Medium';
+    src: url('fonts/Franklin-Gothic-Medium.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Baskerville';
+    src: url('../fonts/Baskerville.ttc');
+}
+html, body{margin: 0;padding: 0;font-size: 12px;font-family: 'Franklin Gothic Book', Arial, sans-serif;color: #333;line-height: 20px}
+a, a:link{text-decoration: none;color: #333;}
+a, a:link, a:active, a:focus, img, a img{outline: none}
+
+.ajax-loading-block-window{height:128px;left:0;overflow:hidden;position:fixed;top:0;width:100%;height:100%;z-index:1100;}
+.ajax-loading-block-window .loading-image{
+    background:url("images/ajax_loader_large.gif") no-repeat;
+    height:128px;left:50%;position:absolute;top:50%;width:128px;margin:0 auto;
+}
+.has-warning .form-control {
+    border-color: #8A6D3B;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.has-error .form-control {
+    border-color: #A94442;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.has-success .form-control {
+    border-color: #3C763D;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.hidden{
+    display: none !important;
+}
+
+#navigation, #main-nav{
+    display: none;
+}
+#menu {
+    background: #2b2b2b;
+    height: 100%;
+    left: 0;
+    min-height: 600px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 300px;
+    z-index: 10;
+}
+#menu ul, #smenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menu a {
+    text-decoration: none;
+}
+#menu a.top {
+    background: url("images/arrows-top-home.png") no-repeat 0 -9px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 0.9em;
+    height: 7px;
+    margin: 25px 0;
+    padding: 1px 0 0 16px;
+    position: relative;
+    text-transform: uppercase;
+    top: 25px;
+    left: -50px;
+    color: #a9a8a6;
+}
+#menu a.top:hover {
+    background-position: 0 4px;
+    color: #878787;
+}
+#menu span.close {
+    color: #a9a8a6;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    font-size: 0.9em;
+    position: absolute;
+    right: 50px;
+    text-align: right;
+    text-transform: uppercase;
+    top: 26px;
+    opacity: 1;
+}
+#menu span.close:hover{
+    color: #3c3c3c;
+}
+#menu span.close, #menu span.close:active {
+    color: #a9a8a6;
+}
+#menu span.close.on {
+    background: rgba(0, 0, 0, 0) url("images/sl-submenu-open.png") no-repeat 7px 5px;
+    height: 14px;
+    right: 0;
+    width: 20px;
+}
+#menu header {
+    position: relative;
+    top: 6%;
+}
+#menu header h1 {
+    /*    background: url("images/logo-ch-ny.png") no-repeat center 0;*/
+    height: 77px;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+#menu header h1 a {
+    display: block;
+    height: inherit;
+    width: inherit;
+}
+.ir{
+    border: 0 none;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-indent: -999em;
+}
+#menu header nav {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+#menu header nav ul {
+    background: url("images/line-grey.png") no-repeat center top;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+#menu header nav ul li a {
+    color: #a9a8a6;
+    font-weight: 400;
+    font-size: 0.9em;
+    height: 22px;
+}
+#menu header nav ul li a:hover, div#menu header nav ul li a.on {
+    color: #fff;
+}
+#menu header nav .search{
+    height: 24px;
+    line-height: 24px;
+    margin: 6px auto 0;
+    position: relative;
+    width: 95%;
+}
+#menu header nav .search .ico-search {
+    background: url("images/search-icon.png") no-repeat scroll 0 0 / 11px 11px;
+    height: 11px;
+    margin-top: -5px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 11px;
+}
+#menu header nav .search .search-field {
+    width: calc(100% - 40px);
+    padding: 3px 30px 3px 10px;
+    border: none;
+    background: #2b2b2b;
+}
+#menu header nav .search .search-field:focus {
+    background: #fff;
+}
+#menu header nav .search .search-btn {
+    display: none;
+}
+#menu footer {
+    bottom: 10px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+#menu footer ul.house {
+    background: url("images/line-grey.png") no-repeat center top;
+    margin: 0 auto;
+    text-align: center;
+    width: 96px;
+}
+#menu footer ul.house li a {
+    /*    background: url("images/logo-rin.png") no-repeat;*/
+    display: block;
+    height: 46px;
+    width: 96px;
+    opacity: 0.6;
+}
+#menu footer ul.house li a:hover {
+    opacity: 1;
+}
+#menu footer #footer_menu {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 180px;
+    text-align: center;
+    color: #a9a8a6;
+    text-transform: none;
+}
+#menu footer #footer_menu a {
+    color: #a9a8a6;
+}
+#menu footer #footer_menu a:hover {
+    color: #000;
+}
+/*#menu footer ul:nth-child(1) {
+    margin-bottom: 5px;
+}*/
+#menu footer ul li {
+    display: inline;
+    margin: 0 2px;
+}
+#menu footer ul li a {
+    color: #a9a8a6;
+    font: 400 0.8em "Franklin Gothic Book";
+}
+#menu footer ul li a:hover {
+    color: #3c3c3c;
+}
+#menu footer ul.social {
+    display: inline-block;
+    left: -5px;
+    margin: 15px auto 0;
+    position: relative;
+    top: 0;
+}
+#menu footer ul.social li:first-child::before {
+    background: none;
+}
+#menu footer ul.social li::before {
+    /*background: #e5e5e5;*/
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    z-index: 0;
+}
+#menu footer ul.social li {
+    cursor: pointer;
+    float: left;
+    left: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+}
+#menu footer ul li {
+    display: inline;
+    margin: 0 2px;
+}
+#menu footer ul li a {
+    color: #a9a8a6;
+    font-weight: 400;
+    font-size: 0.8em;
+    -webkit-transition: -webkit-transform all 0.3s ease;
+    -moz-transition: -moz-transform all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#menu footer ul.social li a {
+    background: rgba(0, 0, 0, 0) url("images/footer-picto.png") no-repeat;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    opacity: 0.7;
+    width: 100%;
+}
+#menu footer ul.social li.facebook a {
+    background-position: -3px 0;
+    height: 22px;
+    width: 38px;
+}
+#menu footer ul.social li.facebook a:hover {
+    background-position: -3px -21px;
+}
+#menu footer ul.social li.pinterest a {
+    background-position: -171px 0;
+    height: 22px;
+    width: 38px;
+}
+#menu footer ul.social li.pinterest a:hover {
+    background-position: -171px -21px;
+}
+#menu footer ul.social li.youtube a {
+    background-position: -62px 0;
+    height: 22px;
+    width: 45px;
+}
+#menu footer ul.social li.youtube a:hover {
+    background-position: -62px -21px;
+}
+#menu footer ul.social li.instagram a {
+    background-position: -218px 0;
+    height: 22px;
+    width: 38px;
+}
+#menu footer ul.social li.instagram a:hover {
+    background-position: -218px -21px;
+}
+#menu footer ul.social li.weibo a {
+    background-position: -268px 0;
+    height: 22px;
+    width: 38px;
+}
+#menu footer ul.social li.weibo a:hover {
+    background-position: -268px -21px;
+}
+#menu footer ul.social li.wechat a {
+    background-position: -320px 0;
+    height: 22px;
+    width: 38px;
+}
+#menu footer ul.social li.wechat a:hover {
+    background-position: -320px -21px;
+}
+#smenu {
+    /*background: #393939;*/
+    background: url(images/bg_caption2.png) repeat 0 0;
+    height: 100%;
+    left: 150px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 190px;
+    z-index: 9;
+}
+#smenu nav {
+    display: none;
+    left: 0;
+    position: relative;
+    top: 20%;
+}
+#smenu nav > ul.first {
+    background: none;
+    margin-top: 0;
+}
+#smenu nav > ul {
+    background: url("images/line-grey-dark.png") no-repeat center top;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+#smenu nav ul li.title {
+    line-height: 20px;
+}
+#smenu nav ul li {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1em;
+}
+#smenu nav#snav-inspiration ul li {
+    margin: 12px 0;
+}
+#smenu nav ul li a {
+    color: #959595;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 17px;
+    height: 17px;
+}
+#smenu nav ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#main {
+    width: calc(100% - 300px);
+    height: 100%;
+    left: 300px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+#main.fullscreen {
+    left: 90px;
+}
+#main .grid{
+    position: relative;
+    overflow: hidden;
+}
+#main .grid .grid-item{
+    float: left;
+    overflow: hidden;
+}
+#main .grid .grid-item section{
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    opacity: 0.98;
+    -webkit-transition: -webkit-transform all 0.3s ease;
+    -moz-transition: -moz-transform all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#main .grid .grid-item section article{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font: 400 1.4em/22px "Franklin Gothic Book";
+    text-transform: uppercase;
+}
+#main .grid .grid-item section article a{
+    color: #666;
+    display: block;
+    /*padding: 20px;*/
+}
+#main .grid .grid-item section article a:hover{
+    color: #333;
+}
+#main .grid .grid-item img{
+    width: 100%;
+    height: auto
+}
+#main .grid .grid-w{
+    width: 33.33%;
+    height: 30%
+}
+#main .grid .grid-w1{
+    width: 60%;
+    height: 38%
+}
+#main .grid .grid-w2{
+    width: 40%;
+    height: 38%
+}
+#main .grid .grid-w3{
+    width: 66.7%;
+    height: 32%
+}
+#main .grid .grid-w4{
+    width: 33.3%;
+    height: 32%
+}
+
+/* Archive */
+#main .archive{
+    background: #fafafa;
+    overflow-y: auto;
+    padding: 38px 10px 20px;
+    height: calc(100% - 38px - 20px);
+}
+#main .archive h1{
+    color: #999;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 8px;
+}
+#main .categories{
+    overflow: auto;
+    position: relative;
+    height: 100%;
+}
+#main .categories .categories-header{
+    padding-top: 50px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+#main .categories .categories-header a{
+    color: #333;
+}
+#main .categories .categories-header a:hover{
+    color: #000;
+}
+#main .categories .categories-header .breadcrumbs{
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+    display: inline;
+}
+#main .categories .categories-header .size-filter{
+    display: inline;
+    padding-left: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+#main .categories .categories-header .size-filter ul{
+    display: none;
+    left: 5px;
+    position: absolute;
+    top: 16px;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    opacity: 0.9;
+}
+#main .categories .categories-header .size-filter:hover ul{
+    display: block;
+}
+#main .categories .categories-header .size-filter ul a{
+    padding: 0 20px 3px;
+    display: block;
+}
+#main .categories .categories-header .size-filter ul a:hover{
+    font-weight: 600;
+}
+#main .categories ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#main .categories ul.grid3 li{
+    float: left;
+    padding: 3px;
+    width: 200px;
+}
+#main .categories ul.grid3 li a {
+    color: #383838;
+    display: block;
+    position: relative;
+}
+#main .categories ul.grid3 li a img {
+    display: block;
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#main .categories ul.grid3 li a:hover img {
+    opacity: 0;
+}
+#main .categories ul.grid3 li a img.image-hidden {
+    position: static;
+}
+#main .categories ul.grid3 li a:hover img.image-hidden {
+    opacity: 1;
+}
+#main .categories ul.grid3 li a strong {
+    transition: all 0.3s ease 0s;
+    background: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+    display: block;
+    font-family: "Franklin Gothic Book";
+    font-weight: normal;
+    left: 0;
+    line-height: 15px;
+    opacity: 0;
+    padding: 20px 10px;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+}
+#main .categories ul.grid3 li a:hover strong {
+    opacity: 1;
+}
+#main .categories ul.grid3 li a strong .title {
+    text-transform: uppercase;
+}
+#main .categories ul.grid3 li a strong span.price {
+    display: block;
+}
+#main .categories .paging {
+    padding: 20px 0;
+    text-align: center;
+}
+#main .categories .paging a {
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 5px 20px;
+}
+#main .categories .paging a:hover {
+    border: 1px solid #000;
+    color: #000;
+}
+.grid2 {
+    max-width: 100%;
+    list-style: none;
+    margin: 10px auto;
+    padding: 0;
+}
+
+.grid2 li {
+    display: block;
+    float: left;
+    padding: 8px;
+    width: 327px;
+    opacity: 0;
+}
+.grid2 li h3{
+    margin: 6px 0 0;
+    font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+}
+.grid2 li a{
+    color: #666;
+}
+.grid2 li a:hover{
+    color: #3c3c3c;
+}
+
+.grid2 li.shown,
+.no-js .grid2 li,
+.no-cssanimations .grid2 li {
+    opacity: 1;
+}
+
+.grid2 li a,
+.grid2 li img {
+    outline: none;
+    border: none;
+    display: block;
+    max-width: 100%;
+}
+.grid2 li img:hover{
+    opacity: 0.8;
+}
+
+.grid2 .item {
+    background: #fff;
+    /*border-radius: 6px;*/
+    display: block;
+    padding: 10px;
+    -webkit-box-shadow: 0 3px 6px #b5b5b5;
+    -moz-box-shadow:    0 3px 6px #b5b5b5;
+    box-shadow:         0 3px 6px #b5b5b5;
+
+}
+.grid2 .item:hover {
+
+    -webkit-box-shadow:0 3px 6px #a8a8a8;
+    -moz-box-shadow:    0 3px 6px #a8a8a8;
+    box-shadow:        0 3px 6px #a8a8a8;
+
+}
+
+/* Effect 1: opacity */
+.grid2.effect-1 li.animate {
+    -webkit-animation: fadeIn 0.65s ease forwards;
+    animation: fadeIn 0.65s ease forwards;
+}
+
+@-webkit-keyframes fadeIn {
+    0% { }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { }
+    100% { opacity: 1; }
+}
+
+/* Effect 2: Move Up */
+.grid2.effect-2 li.animate {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    -webkit-animation: moveUp 0.65s ease forwards;
+    animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+    0% { }
+    100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+    0% { }
+    100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+
+/* Effect 3: Scale up */
+.grid2.effect-3 li.animate {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-animation: scaleUp 0.65s ease-in-out forwards;
+    animation: scaleUp 0.65s ease-in-out forwards;
+}
+
+@-webkit-keyframes scaleUp {
+    0% { }
+    100% { -webkit-transform: scale(1); opacity: 1; }
+}
+
+@keyframes scaleUp {
+    0% { }
+    100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+}
+
+/* Effect 4: fall perspective */
+.grid2.effect-4 {
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+}
+
+.grid2.effect-4 li.animate {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+    transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+    -webkit-animation: fallPerspective .8s ease-in-out forwards;
+    animation: fallPerspective .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes fallPerspective {
+    0% { }
+    100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+}
+
+@keyframes fallPerspective {
+    0% { }
+    100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+}
+
+/* Effect 5: fly (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.grid2.effect-5 {
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+}
+
+.grid2.effect-5 li.animate {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50% -300px;
+    transform-origin: 50% 50% -300px;
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    -webkit-animation: fly .8s ease-in-out forwards;
+    animation: fly .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes fly {
+    0% { }
+    100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes fly {
+    0% { }
+    100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+}
+
+/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.grid2.effect-6 {
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+}
+
+.grid2.effect-6 li.animate {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotateX(-80deg);
+    transform: rotateX(-80deg);
+    -webkit-animation: flip .8s ease-in-out forwards;
+    animation: flip .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes flip {
+    0% { }
+    100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes flip {
+    0% { }
+    100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+}
+
+/* Effect 7: helix (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.grid2.effect-7 {
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+}
+
+.grid2.effect-7 li.animate {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-animation: helix .8s ease-in-out forwards;
+    animation: helix .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes helix {
+    0% { }
+    100% { -webkit-transform: rotateY(0deg); opacity: 1; }
+}
+
+@keyframes helix {
+    0% { }
+    100% { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); opacity: 1; }
+}
+
+/* Effect 8:  */
+.grid2.effect-8 {
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+}
+
+.grid2.effect-8 li.animate {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+    -webkit-animation: popUp .8s ease-in forwards;
+    animation: popUp .8s ease-in forwards;
+}
+
+@-webkit-keyframes popUp {
+    0% { }
+    70% { -webkit-transform: scale(1.1); opacity: .8; -webkit-animation-timing-function: ease-out; }
+    100% { -webkit-transform: scale(1); opacity: 1; }
+}
+
+@keyframes popUp {
+    0% { }
+    70% { -webkit-transform: scale(1.1); transform: scale(1.1); opacity: .8; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; }
+    100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+}
+
+@media screen and (max-width: 1280px) {
+    .grid2 li {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .grid2 li {
+        width: calc(50% - 16px);
+    }
+}
+@media screen and (max-width: 400px) {
+    .grid2 li {
+        width: calc(100% - 16px);
+    }
+}
+
+.grid2 li img {
+    width: 100%;
+}
+
+/* Archive: end */
+
+.static-links{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #fff;
+    color: #575757;
+    padding: 5px 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.static-links a{
+    color: #575757;
+    padding: 0 5px;
+}
+.static-links a:hover{
+    color: #000;
+}
+
+.homepage-video > #video_player,
+.homepage-video > #video_player_wrapper {
+    position: absolute !important;
+}
+.homepage-video iframe{
+    width: 100%!important;
+}
+
+.page-layerslider {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+.page-slideshow {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    background:#212121;
+}
+
+.page-newaccount{
+    overflow: hidden;
+    position: relative;
+    padding-top: 100px;
+    background: #f5f5f5;
+    height: calc(100% - 100px);
+}
+.page-newaccount .user-signup{
+    width: calc(60% - 30px);
+    float: left;
+    padding: 0 15px;
+}
+.page-newaccount .user-signin{
+    width: calc(40% - 30px);
+    float: left;
+    padding: 0 15px;
+}
+#btnSignup, #btnSignin{
+    background: #6b6b6b;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0.8;
+}
+#btnSignup:hover, #btnSignin:hover{
+    opacity: 1;
+}
+
+.page{
+    overflow: hidden;
+    position: relative;
+}
+.main-left{
+    width: 100%;
+}
+.main-left iframe{
+    width: 100%;
+    height: 100%;
+}
+.breadcrumbs {
+    font: 400 1em/22px "Franklin Gothic Book";
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.post{
+    width: 200px;
+    height: calc(100% - 120px);
+    padding: 100px 25px 20px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    bottom: 0;
+    margin-right: 0;
+    background: #fff;
+}
+.post .post-title{
+    /*font-family: "Franklin Gothic Book";*/
+    /*font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;*/
+    font-family: "Baskerville";
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 22px;
+    margin: 0 0 10px;
+}
+.post .post-content{
+    text-align: justify;
+    /*font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;*/
+    font-family: "Baskerville";
+    font-size: 16px;
+    line-height: 1.5;
+}
+.post .post-content h1, .post .post-content h2, .post .post-content h3{
+    /*font-weight: normal;*/
+    line-height: 1.3;
+}
+/*.post .post-content h3{
+    font-size: 16px;
+}*/
+.post .post-content iframe{
+    display: block;
+    margin: auto;
+}
+.post .post-content p{
+    margin: 0 0 10px!important;
+}
+.post .post-content .share-social-box{
+    margin-top: 20px;
+}
+#page-content-toggle {
+    left: -21px;
+    margin-top: -33px;
+    position: absolute;
+    top: 45%;
+}
+.post #page-content-toggle {
+    background: #fff url("images/super-prev.png") no-repeat -7px 0;
+    font-size: 0;
+    height: 36px;
+    text-indent: -9999px;
+    width: 20px;
+    border: 1px solid #e6e6e6;
+    border-right: none
+}
+.post.toggle-active #page-content-toggle {
+    background: #fff url("images/super-next.png") no-repeat -10px 0;
+    left: 0;
+    border-right: 1px solid #e6e6e6;
+    border-left: none
+}
+.post.product{
+    padding: 60px 25px 20px;
+    height: calc(100% - 80px);
+}
+.product #page-content-toggle{
+    display: none;
+}
+.product .price{
+    font-size: 20px;
+}
+.product .color-list{
+    margin-top: 10px;
+}
+.product .color-list img, .product .size-list span{
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-right: 3px;
+}
+.product .color-list img:hover, .product .color-list img.active, 
+.product .size-list span:hover, .product .size-list span.active{
+    border: 1px solid #333;
+}
+.product .color-selected, .product .size-selected{
+    text-transform: uppercase;
+    font: 400 1em/22px "Franklin Gothic Book";
+    margin-bottom: 10px;
+    display: block;
+}
+.product .size-list{
+    margin-bottom: 10px;
+}
+.product .size-list span{
+    padding: 5px 10px;
+}
+.color-error, .size-error{
+    color: red;
+    font-size: 11px;
+    display: block;
+}
+.product .product-status{
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font: 400 1em/22px "Franklin Gothic Book";
+}
+.product .btnAddToCart{
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font: 400 1.1em/22px "Franklin Gothic Book";
+    cursor: pointer;
+    outline: none;
+}
+.product .btnAddToCart:hover{
+    opacity: 0.9;
+    background: #666;
+}
+
+#prevslide, #nextslide {
+    height: 51px !important;
+    width: 24px !important;
+    position: absolute;
+    cursor: pointer;
+    top: 39%
+}
+#prevslide {
+    background: url("images/super-prev2.png") no-repeat 0 0 !important;
+    left: 35px;
+}
+#nextslide {
+    background: url("images/super-next2.png") no-repeat 0 0 !important;
+    right: 35px;
+}
+#prevslide:hover, #nextslide:hover {
+    opacity: 1;
+    -webkit-transition: -webkit-transform all 0.3s ease;
+    -moz-transition: -moz-transform all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#slide-carousel-tmp{
+    display: none;
+}
+
+.big-image{
+    position: relative;
+}
+.big-image #prevslide, .big-image #nextslide{
+    bottom: 50%;
+}
+.big-image .slide-item{
+    cursor: pointer;
+}
+.big-image span.view-image {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+    color: #888;
+    display: none;
+    font-size: 12px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 17px;
+    padding: 12px 10px 8px;
+    position: fixed;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 99;
+}
+.big-image .close-btn {
+    background: url("images/close-btn2.png") no-repeat 0 0;
+    height: 15px;
+    width: 16px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 16px;
+    display: none;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+
+.page-cart{
+    padding: 30px 20px 0;
+}
+.page-cart .page-title{
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    font: 400 1.6em/22px "Franklin Gothic Book";
+}
+.page-cart .cartInfo{
+    border-bottom: 1px solid #ccc;
+}
+.cartInfo table{
+    width: 100%;
+}
+.cartInfo .quantity{
+    width: 90px;
+}
+.cartInfo .quantity .qtyval{
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    border-left: none;
+    border-right: none;
+    color: #888;
+    float: left;
+    font-size: 14px;
+    height: 20px;
+    text-align: center;
+    width: 30px;
+}
+.cartInfo .quantity .plus, .cartInfo .quantity .minus{
+    border: 1px solid #eeeeee;
+    color: #888;
+    float: left;
+    font-size: 14px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    width: 25px;
+}
+.cart-price{
+    font: 400 22px/20px "Franklin Gothic Book";
+    margin: 10px 0;
+}
+.btnCart a{
+    padding: 5px 15px;
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    font: 400 1.2em/22px "Franklin Gothic Book";
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+}
+.btnCart a:hover{
+    opacity: 0.9;
+    background: #666;
+}
+.page-cart .checkout .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.page-cart .checkout .customer-info {
+    float: left;
+    width: calc(40% - 20px);
+    padding: 0 10px;
+}
+.page-cart .checkout .cart-info {
+    float: left;
+    width: calc(60% - 20px);
+    padding: 0 10px;
+}
+.page-cart .checkout .payment-info{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.page-cart .checkout .payment-info input{
+    margin-left: 0;
+}
+.page-cart .checkout .payment-info table{
+    border-color: #ccc;
+}
+.page-cart .checkout .payment-info .PaymentMethod_Info{
+    padding-left: 20px;
+}
+.page-cart .checkout .cartCheckout{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+.page-cart .checkout .cartCheckout td{
+    padding: 0 0 10px;
+}
+.page-cart .checkout .cartCheckout .cart-meta{
+    color: #666;
+}
+.page-cart .checkout .cartInfo-price{
+    margin: 0 0 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.page-cart .checkout .cartInfo-price .totalAmount{
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.control-label{
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group{
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.form-control{
+    border: 1px solid #dedede;
+    padding: 5px 8px;
+    width: 100%;
+}
+input.form-control{
+    width: calc(100% - 18px);
+}
+
+.warning { color: orangered; }
+.error { color: red; }
+.success { color: green; }
+.no-width{width: auto !important}
+
+/* Responsive */
+@media(max-width: 1024px){
+    #navigation{
+        display: block;
+    }
+    #menu{
+        display: none !important;
+    }
+    #smenu{
+        display: none !important;
+    }
+    #main{
+        position: relative;
+        width: 100% !important;
+        left: 0;
+    }
+    #main.fullscreen{
+        left: 0;
+    }
+    .static-links{
+        top: 0;
+        right: 0;
+    }
+    .homepage-video > #video_player,
+    .homepage-video > #video_player_wrapper {
+        position: relative !important;
+    }
+
+    #main .categories ul.grid3 li{
+        width: calc(20% - 6px);
+    }
+}
+@media(max-width: 800px){
+    #main .categories ul.grid3 li{
+        width: calc(25% - 6px);
+    }
+}
+@media(max-width: 600px){
+    .page-newaccount .user-signup{
+        width: calc(100% - 30px);
+    }
+    .page-newaccount .user-signin{
+        width: calc(100% - 30px);
+        margin-top: 20px;
+    }
+
+    .form-group{
+        width: 100%;
+    }
+
+    .post{
+        width: calc(100% - 20px);
+        height: auto;
+        padding: 20px 10px;
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin-right: 0;
+    }
+
+    #main .categories ul.grid3 li{
+        width: calc(33% - 6px);
+    }
+}
+@media(max-width: 400px){
+    #main .categories ul.grid3 li{
+        width: calc(50% - 6px);
+    }
+}
